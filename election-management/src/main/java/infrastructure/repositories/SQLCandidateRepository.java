@@ -1,6 +1,7 @@
 package infrastructure.repositories;
 
 import domain.Candidate;
+import domain.CandidateQuery;
 import domain.CandidateRepository;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -14,12 +15,7 @@ public class SQLCandidateRepository implements CandidateRepository {
     }
 
     @Override
-    public List<Candidate> findAll() {
+    public List<Candidate> find(CandidateQuery query) {
         return List.of();
-    }
-
-    @Override
-    public Optional<Candidate> findById(String id) {
-        return Optional.empty();
     }
 }
