@@ -84,6 +84,10 @@
       <artifactId>quarkus-redis-client</artifactId>
     </dependency>
     <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-scheduler</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.inferred</groupId>
       <artifactId>freebuilder</artifactId>
       <version>2.8.0</version>
