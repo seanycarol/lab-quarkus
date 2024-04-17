@@ -49,4 +49,10 @@ public class RedisElectionRepository implements ElectionRepository {
                 .map(id -> findById(id.replace(KEY, "")))
                 .toList();
     }
+
+    @Override
+    public void vote(String electionId, Candidate candidate) {
+        LOGGER.info("Voting for " + candidate.id());
+        sortedSetCommands.zincrby(KEY + electionId, 1, candidate.id());
+    }
 }
